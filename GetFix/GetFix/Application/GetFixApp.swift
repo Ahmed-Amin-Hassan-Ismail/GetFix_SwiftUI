@@ -14,6 +14,12 @@ struct GetFixApp: App {
     
     @State private var shouldShowLaunchScreen: Bool = true
     
+    // MARK: - Init
+    
+    init() {
+        UIScrollView.appearance().bounces = false
+    }
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
@@ -24,7 +30,7 @@ struct GetFixApp: App {
                     
                 } else {
                     
-                    LoginView()
+                    SignInWithEmailView()
                 }
             }
             .navigationViewStyle(.stack)
